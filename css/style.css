@@ -95,12 +95,19 @@ main{
 }
 .card{
     margin: 30px;
+    align-content: center;
 
 }
 
 .imgFilmes{
     width: 250px;
     margin-bottom: 15px;
+}
+.btn{
+    background: black;
+    border-color: black;
+    box-shadow: 0px 0px 2px 2px #fff100;
+
 }
 
 
