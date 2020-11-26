@@ -1,0 +1,111 @@
+/* Fontes do projeto*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/*TOPO*/
+#container{
+    width: 100%;
+   
+}
+
+header{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+	width: 250px;
+	margin: 20px 0 20px 120px;
+}
+
+header nav{
+	margin: 20px 120px 20px 0px;
+}
+
+header nav a{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Anton', sans-serif;
+	color:#fff100;
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+header nav a:hover{
+    text-decoration: none;
+    color: #fff100;
+}
+
+/*Corpo*/
+/*Quem Somos*/
+
+main{
+    background-color: #fff100;
+}
+
+#paiQuemSomos{
+    display: flex;
+    justify-content: center;
+    padding: 30px;    
+}
+
+#quemSomos{
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+}
+
+.textoquemsomos{
+	width: 100%;
+    font-size: 18px;
+    text-align: center; 
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+/*Filmes*/
+#filmes{
+    width: 75%;
+    
+    border: red 2px solid;
+    background-color: black;
+    margin: 15px 5px 15px 40px;
+    color: white;
+
+
+}
+.cartao{
+    width: 350px;
+    margin: 30px;
+
+}
+
+.filmes2{
+    margin: 30px 5px 15px 30px;
+    
+
+}
+
+
+.imgFilmes{
+    width: 300px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
