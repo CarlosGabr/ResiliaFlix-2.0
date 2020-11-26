@@ -21,7 +21,9 @@ header{
 }
 
 header nav{
-	margin: 20px 120px 20px 0px;
+    margin: 20px 50px 20px 0px;
+    display: flex;
+
 }
 
 header nav a{
@@ -30,7 +32,7 @@ header nav a{
 	font-family: 'Anton', sans-serif;
 	color:#fff100;
 	font-size: 20px;
-	margin-left: 10px;
+	margin-left: 5px;
 }
 
 header nav a:hover{
@@ -38,11 +40,19 @@ header nav a:hover{
     color: #fff100;
 }
 
+.iconeLupa{
+    width: 15px;
+}
+
 /*Corpo*/
 /*Quem Somos*/
 
 main{
     background-color: #fff100;
+}
+
+.carossel{
+    width: 100%;
 }
 
 #paiQuemSomos{
@@ -79,26 +89,18 @@ main{
     background-color: black;
     margin: 15px 5px 15px 40px;
     color: white;
+    
 
 
 }
-.cartao{
-    width: 350px;
+.card{
     margin: 30px;
 
 }
 
-.filmes2{
-    margin: 30px 5px 15px 30px;
-    
-
-}
-
-
 .imgFilmes{
-    width: 300px;
+    width: 250px;
     margin-bottom: 15px;
-    align-items: center;
 }
 
 
