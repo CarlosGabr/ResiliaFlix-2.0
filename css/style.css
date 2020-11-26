@@ -45,15 +45,16 @@ header nav a:hover{
 }
 
 /*Corpo*/
-/*Quem Somos*/
-
 main{
-    background-color: #fff100;
+  background-image: url(../img/fundo.jpg);
+
 }
 
 .carossel{
     width: 100%;
 }
+
+/*Quem Somos*/
 
 #paiQuemSomos{
     display: flex;
@@ -73,35 +74,43 @@ main{
 }
 
 .textoquemsomos{
-	width: 100%;
+	width: 80%;
     font-size: 18px;
     text-align: center; 
     font-family: 'Roboto', sans-serif;
-
-
 }
 
-/*Filmes*/
+/*Filmes e Séries*/
 #filmes{
-    width: 75%;
-    
-    border: red 2px solid;
-    background-color: black;
+    width: 75%;    
+    background-color: rgba(0, 0, 0, 0.6);
     margin: 15px 5px 15px 40px;
-    color: white;
-    
-
-
+    color: white;    
 }
+
+h2{
+    margin: 20px 0 20px 40px;
+}
+
 .card{
     margin: 30px;
-
+    align-content: center;
 }
 
 .imgFilmes{
     width: 250px;
     margin-bottom: 15px;
 }
+
+.btn{
+    background: black;
+    border-color: black;
+    box-shadow: 0px 0px 2px 2px #fff100;
+}
+
+/*Rodapé*/
+
+
 
 
 
