@@ -3,43 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Cadastro de Usuário</title>
 </head>
-<body>
+
+<body background="imagem/giff.gif">
     <!-- Página de cadastro de usuário:
     Deve conter formulário com: -->
-    <header>
 
-    </header>
+    <div id="container">
+        <header>
+            <img src="imagem/logoResilia2.png">
 
-    <div id="cadastroUsuarios">
-
-        <h1>Preencha seus dados e cadastre-se:</h1>
-
-        <label>Nome:</label><br>
-        <input id="nome" type="text" placeholder="Digite seu nome aqui."><br><br>
-
-        <label>E-mail:</label><br>
-        <input id="e-mail" type="email" placeholder="Digite seu e-mail aqui."><br><br>
-
-        <label>Senha:</label><br>
-        <input id="senha" type="text" placeholder="Sua senha deve ter min 8 dígitos."><br><br>
-    
-        <label>Confirme sua senha:</label><br>
-        <input id="senha2" type="text" placeholder="Digite novamente a sua senha."><br><br>
-    
-        <label>RG:</label><br>
-        <input id="rg" type="number" placeholder="Digite seu RG."><br><br>
-    
-        <label>CEP:</label><br>
-        <input id="cep" type="number" placeholder="Digite seu CEP aqui."><br><br>
-        <!-- CEP (completar endereço utilizando API); -->
-        <label>Endereço:</label><br>
-        <input id="endereço" type="text" placeholder="Endereço cadastrado."><br><br>
-        <label>Número:</label> <input type="number"> <label>Complemento:</label><input type="text">
-
+            <nav> 
+                <a class="texto" href="#">Início</a>
+                <a class="texto" href="#">filmes</a>
+                <a class="texto" href="#">séries</a>
+                <a class="texto" href="#">Cadastre-se</a>
+                <a class="texto" href="#">login</a>                
+            </nav>
+                    
+        </header>
     </div>
+
+    <main>	
+        <p class="principal">Preencha seus dados e cadastre-se:</p>
+    </main>
+
+    <form method="get" action="." id="cadastroUsuarios">
+
+        <!-- <label id="nomes">Nome:</label><br> -->
+        <input id="nome" type="text" placeholder="Nickname">
+
+        <!-- <label id="nomes">E-mail:</label><br> -->
+        <input id="email" type="email" placeholder="Email Address">
+
+        <!-- <label id="nomes">Senha:</label><br> -->
+        <input id="senha" type="password" placeholder="Password">
+    
+        <!-- <label id="nomes">Confirme sua senha:</label><br> -->
+        <input id="novamenteSenha" type="password" placeholder= "Password Confirmation">
+    
+        <!-- <label id="nomes">RG:</label><br> -->
+        <input id="rg" type="number" placeholder= "Identity Card">
+    
+        <!-- <label id="nomes">CEP:</label><br> -->
+        <input id="cep" type="text" placeholder="Postal Code" onblur="pesquisacep(this.value);">
+        
+        <!-- CEP (completar endereço utilizando API); -->
+        
+        <!-- <label id="nomes">Cidade:</label> -->
+        <input name= "cidade" id= "cidade" type="text" placeholder="City" >
+
+        <!-- <label class="ruas" id="nomes">Rua:</label>  -->
+        <input id= "rua" type="text" placeholder="Street" > 
+
+        <!-- <label id="nomes">Estado:</label> -->
+        <input id= "uf" type="text" placeholder="State">
+
+        <button class="botao">Sign Up!</button>
+
+    </form>
+
+    <script src="busca.js" href= "#"></script>
     <footer>
 
     </footer>
