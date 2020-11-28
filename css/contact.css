@@ -1,0 +1,44 @@
+#paiCorpoContato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0 100px 0;
+}
+#corpoContact{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time{
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+}
+
+/*ALUNOS*/
+.aluno{
+    width: 200px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.fotoAluno{
+    width: 150px;
+    margin: 30px 15px 5px 15px;
+
+}
+.icones{
+    width: 30px;
+    margin: 10px ;
+    align-items: center;
+}
