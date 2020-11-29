@@ -95,10 +95,6 @@ h2{
 .card{
     margin: 30px;
     align-content: center;
-<<<<<<< HEAD
-=======
-
->>>>>>> 22d884652c145ccb169101f4408564dcb0b637db
 }
 
 .imgFilmes{
@@ -116,6 +112,10 @@ h2{
     background: black;
     border-color: black;
     box-shadow: 0px 0px 2px 2px #fff100;
+}
+
+.btn:hover{
+    background-color:#fff100;
 }
 
 /*Rodapé*/
