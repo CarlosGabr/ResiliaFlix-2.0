@@ -3,12 +3,14 @@ class  Controller {
   }
   static adicionaNovoFilme(idFilme) {
     console.log(idFilme)
-    let novoFilme = new Model ();
-    //chamo o método da model passando o id do filme que foi clicado
-    novoFilme.requisicaoNovoFilme(idFilme); 
-    //chamo o método da View passando o modelo de objeto criado na model
-    let exibirNovoFilme = new View ();
-    exibirNovoFilme.mostrarNovoFilme(novoFilme);
+    let novoFilme = new Model();
+    //chamo o método da model passando o id do filme que foi clicado e uma funcao setinha como parametro
+    novoFilme.requisicaoNovoFilme(idFilme, ()=>{ 
+      //so instancio a classe View após o carregamento das inf do filme
+      //através da funcaoQueExecutaAposResposta, que é chamada após o "load"
+      let exibirNovoFilme = new View();
+      exibirNovoFilme.mostrarNovoFilme(novoFilme); 
+    }); 
   }
 }
 
@@ -20,9 +22,9 @@ class Model {
     this._ano = "";
     this._tempo = "";
     this._sinopse = "";
-    this._genero = ""
+    this._genero = "";
   }
-  requisicaoNovoFilme(idFilme) {
+  requisicaoNovoFilme(idFilme, funcaoExecutadaAposResposta) {
     let request = new XMLHttpRequest();
     request.addEventListener ("load" , () =>{
       if (request.status == 200) {
@@ -30,6 +32,7 @@ class Model {
         // passo para o processaDados a resposta da requisicao e retorno um JSON, que será parametro para o
         //o método atualizaDados direcionar os respectivos atributos
         this._atualizaDados(this._processaDados(request.responseText));
+        funcaoExecutadaAposResposta();
       }
 
       else{
@@ -39,7 +42,7 @@ class Model {
 
 
     });
-    request.open("GET",`http://www.omdbapi.com/?apikey=167350f2&i=${idFilme}&plot=full`,false);
+    request.open("GET",`http://www.omdbapi.com/?apikey=167350f2&i=${idFilme}&plot=full`);
     request.send();
   }
   _processaDados(filmeDados) {
@@ -62,7 +65,7 @@ class Model {
 
 class View {
   constructor (){
-    console.log("Entrei na view...");
+    console.log("Criei uma view...");
   }
   mostrarNovoFilme(modelo) {
     //recebendo um modelo de objeto com atributos, seleciono o titulo e o corpo do modal 
@@ -70,10 +73,10 @@ class View {
     let tituloModal = document.querySelector(".modal-title");
     tituloModal.innerHTML = modelo._nome;
     let corpoModal = document.querySelector(".modal-body");
-    corpoModal.innerHTML = `Year: ${modelo._ano}
-                            Time: ${modelo._tempo}
-                            Synopsis: ${modelo._sinopse}
-                            Genre: ${modelo._genero}`
+    corpoModal.innerHTML = `<b>Year:</b> ${modelo._ano}<br>
+                            <b>Time:</b> ${modelo._tempo}<br>
+                            <b>Synopsis:</b> ${modelo._sinopse}<br>
+                            <b>Genre:</b> ${modelo._genero}`
   }
 }
  
