@@ -1,3 +1,8 @@
+/* Fontes do projeto*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
 #paiCorpoContato{
     display: flex;
     justify-content: center;
@@ -11,10 +16,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .time{
     font-family: 'Anton', sans-serif;
     text-transform: uppercase;
+}
+#divmae {
+    color: #fff100;
+}
+.navbarcolor {
+    background-color: black;
+    color: #fff100;
 }
 
 /*ALUNOS*/
