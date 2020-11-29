@@ -31,6 +31,13 @@ class Model {
         //o método atualizaDados direcionar os respectivos atributos
         this._atualizaDados(this._processaDados(request.responseText));
       }
+
+      else{
+        erro(request.status)
+    }
+
+
+
     });
     request.open("GET",`http://www.omdbapi.com/?apikey=167350f2&i=${idFilme}&plot=full`,false);
     request.send();
@@ -83,3 +90,13 @@ botoes.forEach((element, index)=>{ // percorro esse botao, pegando elemento e in
   })
 });
  
+
+function erro(num_erro){
+
+  corpo.innerHTML = ` <h1 id = titulo>Erro ${num_erro}</h1>
+    <h3>Unfortunately we couldn't find what you are looking for.</h3>
+    <h4>Try again or <a id ="contact" href= '#paginadecontato'>contact our team</a>.</h4>
+    <br>
+    <img src ="logo_resiliaflix.png" width = 100px height = 60px>
+    </div>`
+}
