@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 
 
@@ -19,8 +20,8 @@ header{
 }
 
 #logo{
-	width: 250px;
-	margin: 20px 0 20px 120px;
+	width: 300px;
+	
 }
 
 header nav{
@@ -99,6 +100,20 @@ main{
     margin: 15px 5px 80px 40px;
     color: white;    
 }
+.fundo-especial{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    margin-top: 30px;
+}
+.div-filme {
+    border-radius: 4px;
+    padding: 10px;
+}
+.imagem-Filme {
+    width: 100%;
+    height: 90%;
+    
+}
 
 h2{
     margin: 40px 0 0 40px;
@@ -118,9 +133,24 @@ h2{
     background: black;
     border-color: black;
     box-shadow: 0px 0px 2px 2px #fff100;
+    font-family: Raleway;
+    font-weight: bold;
 
 }
 
+/*Estilo Modal*/
+.body-modal {
+    background-image: url(../img/fundo.jpg);
+    width: 100%;
+    opacity: 0.9;
+    padding: 10px;
+}
+.footer-modal {
+    background-color: black;
+    margin: 0px;
+    padding: 5px;
+    border: black;
+}
 /*Rodapé*/
 
 #rodape{
@@ -131,6 +161,9 @@ h2{
     justify-content: center;
     align-items: center;
     padding: 20px 0 20px 0;
+    font-family: Raleway;
+    font-weight: bold;
+    height: 200px;
 }
 
 .iconesRodape{
@@ -141,7 +174,15 @@ h2{
 
 .btn:hover{
     background-color:#fff100;
+    color: black;
+    font-family: Raleway;
+    font-weight: bold;
 }
+/*Identificadores da View*/
+#logoExibicao {
+    width: 150px; 
+    padding-right: 40px;
+ }  
 
 /*Rodapé*/
 
