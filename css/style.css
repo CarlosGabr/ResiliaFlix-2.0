@@ -50,6 +50,7 @@ header nav a:hover{
 /*Corpo*/
 main{
   background-image: url(../img/fundo.jpg);
+  text-align: center;
 
 }
 
@@ -131,6 +132,8 @@ h2{
     justify-content: center;
     align-items: center;
     padding: 20px 0 20px 0;
+    /* position: fixed;
+    margin-bottom: 0; */
 }
 
 .iconesRodape{
@@ -141,6 +144,28 @@ h2{
 
 .btn:hover{
     background-color:#fff100;
+}
+
+/* Página de busca */
+
+#fname{
+    width: 50%;
+    height: 40px;
+    box-shadow: black 0px 0px 2px 2px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../img/fundo.jpg);
+    cursor: text;
+
+}
+
+#botao{
+    background: black;
+    border-color: black;
+    box-shadow: 0px 0px 2px 2px #fff100;
+    color: #fff100;
+    font-family: 'Anton';
+  
 }
 
 /*Rodapé*/
