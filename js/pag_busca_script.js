@@ -102,21 +102,29 @@ class View {
   }FilmesSelecionados
   /* Método invocado após a primeira requisição*/
   mostrarNovoFilme() {
-
-    /* Crio um elemento para abrigar as imagens encontradas na busca*/
-    //document.body.appendChild();
     /*O atributo FilmesSelecionados é um array retornado após a primeira requisição, logo podemos percorrer com forEach() */
-    //div.classList.add("resultados")
-    let poteDeImagem = document.getElementById("html_class");
-    poteDeImagem.innerHTML = ``
-    this._FilmesSelecionados._arrayFilmes.forEach(function(element,index) {
-      /* A cada elemento do array retornado, eu adiciono na minha div criada uma imagem com uma âncora nela*/
-      poteDeImagem.innerHTML +=  `
-      <a  id ="click-de-busca" class="btn m-3" data-toggle="modal" data-target="#exibir-filme"><img src =${element.Poster}></a>
-      `
-      });
-
+      let poteDeImagem = document.getElementById("html_class");
+      let grid = document.getElementById("grid-de-filmes");
+      /* Estilização da grid de*/
+      grid.style.padding = "50px"
+      poteDeImagem.style.padding = "10px";
+      poteDeImagem.style.paddingTop = "30px";
+      /* Método invocado após a primeira requisição*/
+      poteDeImagem.innerHTML = ``
+      this._FilmesSelecionados._arrayFilmes.forEach(function(element,index) {
+        /* A cada elemento do array retornado, eu adiciono na minha div criada uma imagem com uma âncora nela*/
+        poteDeImagem.innerHTML +=  `
+        <a  id ="click-de-busca" class="btn m-3" data-toggle="modal" data-target="#exibir-filme"><img id ="filme-pesquisado"src =${element.Poster}></a>
+        `
+        });
       }
+
+  apagarInput(){
+    console.log("aqui")
+    let input= document.querySelector("#fname");
+    input.value = "";
+    console.log(input)
+  }    
 
   get arrayDeFilmes() {
     return this._FilmesSelecionados;
@@ -175,6 +183,7 @@ class  Controller {
 /*Crio um evento de click, que ao ser clicado vai chamar o método AddNovoFilme da classe Controller, passando o valor de input*/
  botaoClick.addEventListener("click",function (event){ 
    Controller.adicionaNovoFilme(input.value);
+   input.value = "";
   }); 
 
 

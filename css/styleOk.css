@@ -237,13 +237,17 @@ h2{
 
 /*Div de filmes*/
 #grid-de-filmes {
-    margin-top: 50px;
-    background-color:rgba(0, 0, 0, 0.4);
+    background-image: url(../img/fundo.jpg);
+    padding: 100px;
+    
 }
 #html_class {
     text-align: center;
- /*    background-color:rgba(0, 0, 0, 0.4); */
-    width: 100%;
+    background-color:rgba(0, 0, 0, 0.6); 
+}
+#filme-pesquisado {
+    width: 300px;
+    height: 400px;
 }
 /*Rodapé*/
 
