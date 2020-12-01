@@ -30,17 +30,14 @@ class Model {
       if (request.status == 200) {
         console.log("Encontrei...vou mostrar");
         // passo para o processaDados a resposta da requisicao e retorno um JSON, que será parametro para o
-        //o método atualizaDados direcionar os respectivos atributos
+        //o método atualizaDados direcionar os respectivos atributos do objeto filme
         this._atualizaDados(this._processaDados(request.responseText));
         funcaoExecutadaAposResposta();
       }
 
       else{
         erro(request.status)
-    }
-
-
-
+      }
     });
     request.open("GET",`http://www.omdbapi.com/?apikey=167350f2&i=${idFilme}&plot=full`);
     request.send();
@@ -71,7 +68,8 @@ class View {
     //recebendo um modelo de objeto com atributos, seleciono o titulo e o corpo do modal 
     //e insiro os dados do objeto novoFilme nele
     let tituloModal = document.querySelector(".modal-title");
-    tituloModal.innerHTML = modelo._nome;
+    tituloModal.innerHTML = `<img id="logoExibicao" src="../img/logoResilia2.png">
+                              ${modelo._nome}`;
     let corpoModal = document.querySelector(".modal-body");
     corpoModal.innerHTML = `<b>Year:</b> ${modelo._ano}<br>
                             <b>Time:</b> ${modelo._tempo}<br>
