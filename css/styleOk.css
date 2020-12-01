@@ -189,10 +189,10 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 0 20px 0;
+    padding: 10px 0 10px 0;
     font-family: Raleway;
     font-weight: bold;
-    height: 200px;
+    height: 150px;
 }
 
 .iconesRodape{
@@ -235,6 +235,16 @@ h2{
   
 }
 
+/*Div de filmes*/
+#grid-de-filmes {
+    margin-top: 50px;
+    background-color:rgba(0, 0, 0, 0.4);
+}
+#html_class {
+    text-align: center;
+ /*    background-color:rgba(0, 0, 0, 0.4); */
+    width: 100%;
+}
 /*Rodapé*/
 
 

@@ -104,16 +104,15 @@ class View {
   mostrarNovoFilme() {
 
     /* Crio um elemento para abrigar as imagens encontradas na busca*/
-    let div = document.createElement("div");
-    document.body.appendChild(div);
+    //document.body.appendChild();
     /*O atributo FilmesSelecionados é um array retornado após a primeira requisição, logo podemos percorrer com forEach() */
-    div.classList.add("resultados")
+    //div.classList.add("resultados")
     let poteDeImagem = document.getElementById("html_class");
     poteDeImagem.innerHTML = ``
     this._FilmesSelecionados._arrayFilmes.forEach(function(element,index) {
       /* A cada elemento do array retornado, eu adiciono na minha div criada uma imagem com uma âncora nela*/
       poteDeImagem.innerHTML +=  `
-      <a  id ="click-de-busca" class="btn m-5" data-toggle="modal" data-target="#exibir-filme"><img src =${element.Poster}></a>
+      <a  id ="click-de-busca" class="btn m-3" data-toggle="modal" data-target="#exibir-filme"><img src =${element.Poster}></a>
       `
       });
 
