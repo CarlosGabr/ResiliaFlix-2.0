@@ -108,9 +108,11 @@ class View {
     document.body.appendChild(div);
     /*O atributo FilmesSelecionados é um array retornado após a primeira requisição, logo podemos percorrer com forEach() */
     div.classList.add("resultados")
+    let poteDeImagem = document.getElementById("html_class");
+    poteDeImagem.innerHTML = ``
     this._FilmesSelecionados._arrayFilmes.forEach(function(element,index) {
       /* A cada elemento do array retornado, eu adiciono na minha div criada uma imagem com uma âncora nela*/
-      div.innerHTML +=  `
+      poteDeImagem.innerHTML +=  `
       <a  id ="click-de-busca" class="btn m-5" data-toggle="modal" data-target="#exibir-filme"><img src =${element.Poster}></a>
       `
       });
