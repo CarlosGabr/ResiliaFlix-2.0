@@ -92,6 +92,8 @@ botoes.forEach((element, index)=>{ // percorro esse botao, pegando elemento e in
     Controller.adicionaNovoFilme(imdbID[index]);
   })
 });
+
+
  
 
 function erro(num_erro){
