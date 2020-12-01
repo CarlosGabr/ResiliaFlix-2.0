@@ -49,7 +49,7 @@ class Model {
       divNotFound.innerHTML= ` 
                           <h3> Unfortunately, the title you're looking for is not avaliable. </h3>
                               <img src="https://media1.tenor.com/images/aa5ad7ceb09b65f48169895d78ff2f9b/tenor.gif?itemid=5652747" alt = "sad_jon">
-                              <h3>Jon Snow might know nothing but you do! So please, try another title.</h3>` 
+                              <h3>Please, try another title.</h3>` 
 } 
   }
   
@@ -161,7 +161,6 @@ class  Controller {
                 let visuFilm = new View();
                 /*Passo pro método da View as informações do filme que foi pego durante o click*/
                 visuFilm.modalFilmes(novoFilmeClicado);
-              
 
               
               
@@ -176,6 +175,7 @@ class  Controller {
  botaoClick.addEventListener("click",function (event){ 
    Controller.adicionaNovoFilme(input.value);
   }); 
+
 
 
   
