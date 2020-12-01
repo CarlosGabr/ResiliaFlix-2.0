@@ -105,10 +105,12 @@ main{
     background-color: rgba(0, 0, 0, 0.6);
     padding: 30px;
     margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 .div-filme {
     border-radius: 4px;
-    padding: 10px;
+    padding: 20px;
 }
 .imagem-Filme {
     width: 100%;
@@ -126,7 +128,7 @@ h2{
 }
 
 .imgFilmes{
-    width: 250px;
+    width: 500px;
     margin-bottom: 15px;
 }
 
@@ -161,12 +163,12 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 0 20px 0;
+    padding: 10px 0 10px 0;
     font-family: Raleway;
     font-weight: bold;
-    height: 200px;
-    position: fixed;
-    bottom: 0;
+    height: 150px;
+    /* position: fixed;
+    bottom: 0; */
 }
 
 .iconesRodape{
@@ -214,14 +216,3 @@ body{
 }
 
 /*Rodapé*/
-
-
-
-
-
-
-
-
-
-
-
