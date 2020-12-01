@@ -50,7 +50,7 @@
         <input id="rg" type="number" placeholder= "Identity Card">
     
         <!-- <label id="nomes">CEP:</label><br> -->
-        <input id="cep" type="text" placeholder="Postal Code" onblur="pesquisacep(this.value);">
+        <input id="cep" type="text" placeholder="Postal Code" onblur="(CepController.informacep(this.value))">
         
         <!-- CEP (completar endereço utilizando API); -->
         
@@ -67,7 +67,7 @@
 
     </form>
 
-    <script src="busca.js" href= "#"></script>
+    <script src = "pesquisacep.js"></script>
     <footer>
 
     </footer>
