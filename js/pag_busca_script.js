@@ -3,7 +3,7 @@ let botaoClick = document.querySelector("#botao");
 /*Pego o valor do campo de input*/
 let input = document.querySelector("#fname");
 
-
+let corpo = document.querySelector("body")
 
 /* Classe Responsável por fazer a primeira requisição */
 class Model {
@@ -25,7 +25,6 @@ class Model {
         this._processaDados(request.responseText);
         funcaoExecutadaAposResposta();
       }
-
       
     });
 
@@ -35,12 +34,23 @@ class Model {
 
   _processaDados(filmeDados) {
     let dadosProcessados = JSON.parse(filmeDados);
+
+     if (dadosProcessados.Response == 'True'){ 
     /* A cada incremento do aarray retornado, o array da classe receberá o elemento correspondente*/
-  
      dadosProcessados.Search.forEach(element => {
-      this._arrayFilmes.push(element)
+     this._arrayFilmes.push(element)
     }); 
     return this._arrayFilmes;
+  
+}
+    else if (dadosProcessados.Response == "False"){
+      let divNotFound = document.createElement("div");
+      document.body.appendChild(divNotFound);
+      divNotFound.innerHTML= ` 
+                          <h3> Unfortunately, the title you're looking for is not avaliable. </h3>
+                              <img src="https://media1.tenor.com/images/aa5ad7ceb09b65f48169895d78ff2f9b/tenor.gif?itemid=5652747" alt = "sad_jon">
+                              <h3>Jon Snow might know nothing but you do! So please, try another title.</h3>` 
+} 
   }
   
 
@@ -60,6 +70,7 @@ class FilmModel {
         this._atualizaDados(JSON.parse((request.responseText)));
         funcaoExecutadaAposResposta();
       }
+      
     });
     /* Requisição é feita utilizando o parâmetro do idmbID do filme, pego na primeira requisição*/
     request.open("GET",`http://www.omdbapi.com/?apikey=167350f2&i=${id}&plot=full`);
@@ -68,11 +79,17 @@ class FilmModel {
   _atualizaDados(dadosAtualizados) {
     //atualizo os dados baseado no JSON retornado >>>> adicionar mais informações
     this._nome = dadosAtualizados.Title;
+    this._ano = dadosAtualizados.Year;
+    this._duracao = dadosAtualizados.Runtime;
     this._sinopse =dadosAtualizados.Plot;
+    this._resposta = dadosAtualizados.Response;
 } 
   get filme() {
     this._nome;
+    this._ano;
+    this._duracao;
     this._sinopse;
+    this._resposta;
   }
 
 }
@@ -100,9 +117,6 @@ class View {
 
       }
 
-
-  
-
   get arrayDeFilmes() {
     return this._FilmesSelecionados;
   }
@@ -111,7 +125,9 @@ class View {
     let tituloModal = document.querySelector(".modal-title");
     tituloModal.innerHTML = `${modelodeFilme._nome}`;
     let corpoModal = document.querySelector(".modal-body");
-    corpoModal.innerHTML = `<b>Synopsis:</b> ${modelodeFilme._sinopse}
+    corpoModal.innerHTML = `<b>Year</b>: ${modelodeFilme._ano} <br>
+    <b>Runtime: </b>${modelodeFilme._duracao} <br>
+    <b>Synopsis:</b> ${modelodeFilme._sinopse}
                             `
 
   }
@@ -145,6 +161,10 @@ class  Controller {
                 let visuFilm = new View();
                 /*Passo pro método da View as informações do filme que foi pego durante o click*/
                 visuFilm.modalFilmes(novoFilmeClicado);
+              
+
+              
+              
               });
             }); 
           }); 
