@@ -1,0 +1,31 @@
+/* Fontes do projeto*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
+.principal{
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 40px;
+
+}
+#paiForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formulario{
+    width: 80%;    
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 15px 5px 80px 40px;
+    padding: 20px;
+    color: white;
+}
+.textoForm{
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
