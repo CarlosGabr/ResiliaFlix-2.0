@@ -165,6 +165,8 @@ h2{
     font-family: Raleway;
     font-weight: bold;
     height: 200px;
+    position: fixed;
+    bottom: 0;
 }
 
 .iconesRodape{
@@ -205,6 +207,10 @@ h2{
     color: #fff100;
     font-family: 'Anton';
   
+}
+
+body{
+ background-image: url(../img/fundo.jpg);  
 }
 
 /*Rodapé*/
