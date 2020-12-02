@@ -115,7 +115,7 @@ main{
 }
 .imagem-Filme {
     width: 100%;
-    height: 90%;
+    height: 100%;
     
 }
 
@@ -146,8 +146,8 @@ h2{
 .body-modal {
     background-image: url(../img/fundo.jpg);
     width: 100%;
-    opacity: 0.9;
     padding: 10px;
+    font-size: 20px;
 }
 .footer-modal {
     background-color: black;
@@ -167,9 +167,7 @@ h2{
     padding: 10px 0 10px 0;
     font-family: Raleway;
     font-weight: bold;
-    height: 150px;
-    /* position: fixed;
-    bottom: 0; */
+    height: 170px;
 }
 
 .iconesRodape{
@@ -198,7 +196,7 @@ h2{
     box-shadow: black 0px 0px 2px 2px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    background-image: url(../img/fundo.jpg);
+    background-color:#FFFFFF;
     cursor: text;
 
 }
