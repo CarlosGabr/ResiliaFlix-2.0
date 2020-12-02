@@ -1,4 +1,4 @@
-// Esqueci a senha!
+/* Esqueci a senha*/
 let forgot = document.getElementById("forgotten_password");
 
 forgot.addEventListener("click", ()=>{
@@ -23,7 +23,9 @@ function abrirModal (){
   let corpoModal = document.querySelector(".modal-body");
   corpoModal.innerText = `Email successfully sent!`;
 };
-// Término
+
+
+/* Funções página de login*/
 
 
 function newModal (){
@@ -62,17 +64,17 @@ $( "#olho" ).mouseout(function() {
 
 let botaoEntrar = document.getElementById("btnn");
 
-let email = document.getElementById("email");
-let senha1 = document.getElementById("senha");
+let emailInformado = document.getElementById("email");
+let senhaInformada = document.getElementById("senha");
 
-let email1 = email.value;
-let senha2 = senha1.value;
-console.log(email1)
-console.log(senha2)
-
-if(email1.length == 0 || senha2.length == 0){
-  console.log("Não enviado")
- erroModal();
-}else {
-  newModal();
-}
+botaoEntrar.addEventListener("click", ()=>{
+  if(emailInformado.value == "" || senhaInformada.value == ""){
+    console.log("to aq")
+    erroModal();
+  }/* else if (emailInformado.value == "" || senhaInformada.value == ""){
+    console.log("um valor")
+    erroModal();
+  } */ else {
+    newModal();
+  }
+});
