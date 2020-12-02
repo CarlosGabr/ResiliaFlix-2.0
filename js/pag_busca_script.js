@@ -78,7 +78,7 @@ class FilmModel {
       
     });
     /* Requisição é feita utilizando o parâmetro do idmbID do filme, pego na primeira requisição*/
-    request.open("GET",`http://www.omdbapi.com/?apikey=167350f2&i=${id}&plot=full`);
+    request.open("GET",`https://www.omdbapi.com/?apikey=167350f2&i=${id}&plot=full`);
     request.send();
   }
   _atualizaDados(dadosAtualizados) {
