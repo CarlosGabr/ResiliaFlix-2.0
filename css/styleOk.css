@@ -159,8 +159,7 @@ h2{
 /*Estilo Modal*/
 .body-modal {
     background-image: url(../img/fundo.jpg);
-    width: 100%;
-    opacity: 0.9;
+    font: 18px;
     padding: 10px;
 }
 .footer-modal {

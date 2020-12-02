@@ -54,6 +54,7 @@ class Model {
     this._tempo = dadosAtualizados.Runtime;
     this._sinopse = dadosAtualizados.Plot; 
     this._genero = dadosAtualizados.Genre;
+    this._imagem = dadosAtualizados.Poster;
     console.log(this._sinopse);
     console.log(this._nome);
   }
@@ -71,7 +72,9 @@ class View {
     tituloModal.innerHTML = `<img id="logoExibicao" src="../img/logoResilia2.png">
                               ${modelo._nome}`;
     let corpoModal = document.querySelector(".modal-body");
-    corpoModal.innerHTML = `<b>Year:</b> ${modelo._ano}<br>
+    corpoModal.innerHTML = `<img id ="imagem-filtrada-api" src=${modelo._imagem}>
+                            <p>_________________________________________________________</p>    
+                            <b>Year:</b> ${modelo._ano}<br>
                             <b>Time:</b> ${modelo._tempo}<br>
                             <b>Synopsis:</b> ${modelo._sinopse}<br>
                             <b>Genre:</b> ${modelo._genero}`

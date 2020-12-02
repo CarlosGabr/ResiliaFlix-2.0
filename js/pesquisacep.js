@@ -59,7 +59,13 @@ class CepView {
     cadastroModal.id = "textoModal";
     tituloModal.innerHTML = `<img id="logoExibicao" src="../img/logoResilia2.png">`;
     cadastroModal.innerHTML = "Cadastro Realizado com Sucesso!"
- 
+  }
+  static errorCadastro(){
+    let cadastroModal = document.querySelector(".modal-body");
+    let tituloModal = document.querySelector(".modal-title");
+    cadastroModal.id = "textoModal";
+    tituloModal.innerHTML = `<img id="logoExibicao" src="../img/logoResilia2.png">`;
+    cadastroModal.innerHTML = "Preencha todos os campos e tente novamente"
   }
   static limpaCampos(){
     document.getElementById('input-name').value= "";
@@ -75,8 +81,26 @@ class CepView {
   }
 }
 
+/*Verifico se os campos estão todos preenchidos*/
+let contador = 0;
+let inputs =  document.querySelectorAll(".form-control");
 let botaoDeEnviar = document.querySelector(".botao-enviar");
+
 botaoDeEnviar.addEventListener("click", () => {
-  CepView.cadastroEfetuado();  
-  CepView.limpaCampos();
+  inputs.forEach((input)=>{
+    if (input.value == ""){
+      console.log(input.value)
+      console.log("aqui")
+      contador++;
+      console.log(contador)
+    }
+});
+  if (contador == 0) {
+    CepView.cadastroEfetuado();  
+    CepView.limpaCampos();
+  }else {
+    CepView.errorCadastro();
+    CepView.limpaCampos();
+    contador = 0;
+  }
 });

@@ -83,6 +83,7 @@ class FilmModel {
     this._duracao = dadosAtualizados.Runtime;
     this._sinopse =dadosAtualizados.Plot;
     this._resposta = dadosAtualizados.Response;
+    this._imagem = dadosAtualizados.Poster;
 } 
   get filme() {
     this._nome;
@@ -134,9 +135,11 @@ class View {
     let tituloModal = document.querySelector(".modal-title");
     tituloModal.innerHTML = `${modelodeFilme._nome}`;
     let corpoModal = document.querySelector(".modal-body");
-    corpoModal.innerHTML = `<b>Year</b>: ${modelodeFilme._ano} <br>
-    <b>Runtime: </b>${modelodeFilme._duracao} <br>
-    <b>Synopsis:</b> ${modelodeFilme._sinopse}
+    corpoModal.innerHTML = `<img id ="imagem-filtrada-api" src=${modelodeFilme._imagem}>
+                            <p>_________________________________________________________</p> 
+                            <b>Year</b>: ${modelodeFilme._ano} <br>
+                            <b>Runtime: </b>${modelodeFilme._duracao} <br>
+                            <b>Synopsis:</b> ${modelodeFilme._sinopse}
                             `
 
   }
@@ -160,19 +163,16 @@ class  Controller {
         /*querySelectorAll >> me retorna um array*/
       let clickar = document.querySelectorAll("#click-de-busca");
       /*Percorro esse array procurando qual elemento foi clicado para fazer a segunda requisição*/
-         clickar.forEach((element, index) => {
-            element.addEventListener("click", () =>{
-              /*Quando eu encontro o elemento, eu crio um nova View para exibir através do modal*/
-              let novoFilmeClicado = new FilmModel();
-              /*Envio para a segunda requisição exatamente o ID da posição que foi pega com o addEventListener, parâmetro do forEach()*/
-              let id = exibirNovoFilme._FilmesSelecionados._arrayFilmes[index].imdbID;
-              novoFilmeClicado.requisicaobyID(id, ()=> {
-                let visuFilm = new View();
-                /*Passo pro método da View as informações do filme que foi pego durante o click*/
-                visuFilm.modalFilmes(novoFilmeClicado);
-
-              
-              
+      clickar.forEach((element, index) => {
+        element.addEventListener("click", () =>{
+        /*Quando eu encontro o elemento, eu crio um nova View para exibir através do modal*/
+        let novoFilmeClicado = new FilmModel();
+        /*Envio para a segunda requisição exatamente o ID da posição que foi pega com o addEventListener, parâmetro do forEach()*/
+          let id = exibirNovoFilme._FilmesSelecionados._arrayFilmes[index].imdbID;
+          novoFilmeClicado.requisicaobyID(id, ()=> {
+          let visuFilm = new View();
+        /*Passo pro método da View as informações do filme que foi pego durante o click*/
+          visuFilm.modalFilmes(novoFilmeClicado);           
               });
             }); 
           }); 
