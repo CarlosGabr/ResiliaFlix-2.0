@@ -46,7 +46,7 @@
 /*ALUNOS*/
 .aluno{
     width: 200px;
-    height: auto;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;

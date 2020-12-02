@@ -14,7 +14,7 @@
 	<!--CSS index-->
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel ="stylesheet" href = "../css/contact.css"
-
+	
 	<!-- Adição de ícone de aba-->
 	<link rel="shortcut icon" type="image/x-icon" href="../img/shortcut_icon.ico">
 	
@@ -25,28 +25,28 @@
 
 <body>
 	
-<!-- NavBar -->
-<section>
-	<nav class="navbar navbar-expand-lg navbar-light nav-bar-header ">
-		<img id="logo" class = "navbar-brand pl-4 pb-2" src="../img/logoResilia2.png">
-		<button class="navbar-toggler cor-botao mr-3" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse nav-item nav-bar-alinhar mr-4" id="navbarNavAltMarkup">
-			<div class="navbar-nav">
-				<a class="nav-link active  cor-do-link " href="index.html">Home <span class="sr-only">(current)</span></a>
-				<a class="nav-link active  cor-do-link "  href="#click-filme">Movies</a>
-				<a class="nav-link active  cor-do-link " href="#click-serie">Series</a>
-				<a class="nav-link active  cor-do-link " href="register.html">Register</a>
-				<a class="nav-link active  cor-do-link " href="login.html">Login</a>
-				<a class="nav-link active  cor-do-link " href="paginadeContato.html">Contact Us</a>
-				<form class="form-inline">
-					<a class="btn btn-outline-success mr-3 ml-2 my-2 my-sm-0" type="submit" href="pag_busca.html"><img class="iconeLupa" src="../img/lupa1.png"></a>
-				</form>
+	<!-- NavBar -->
+	<section>
+		<nav class="navbar navbar-expand-lg navbar-light nav-bar-header ">
+			<a href="index.html"><img id="logo" class = "navbar-brand pl-4 pb-2" src="../img/logoResilia2.png"></a>
+			<button class="navbar-toggler cor-botao mr-3" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse nav-item nav-bar-alinhar mr-4" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-link active  cor-do-link " href="index.html">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-link active  cor-do-link "  href="#click-filme">Movies</a>
+					<a class="nav-link active  cor-do-link " href="#click-serie">Series</a>
+					<a class="nav-link active  cor-do-link " href="register.html">Register</a>
+					<a class="nav-link active  cor-do-link " href="login.html">Login</a>
+					<a class="nav-link active  cor-do-link " href="paginadeContato.html">Contact Us</a>
+					<form class="form-inline">
+						<a class="btn btn-outline-success mr-3 ml-2 my-2 my-sm-0" type="submit" href="pag_busca.html"><img class="iconeLupa" src="../img/lupa1.png"></a>
+					</form>
+				</div>
 			</div>
-		</div>
-	</nav>
-</section>
+		</nav>
+	</section>
 	
 	
 	<!-- Corpo -->
@@ -90,79 +90,79 @@
 			<section id="paiFilmes">
 				<!-- FILMES -->
 				<div id="filmes">
-					<div>
+					<div class="textoGenero">
 						<h2 id=click-filme>Movies</h2>
 					</div>
 					<div class="container">
 						<picture class="row container-movie-poster d-flex justify-content-around mb-5 fundo-especial" >
-								<div class=" img-thumbnail col-12 col-sm-3  shadow p-1  bg-white mb-5 mr-1 div-filme">
-									<img src="https://m.media-amazon.com/images/M/MV5BMTcxODgwMDkxNV5BMl5BanBnXkFtZTYwMDk2MDg3._V1_SX300.jpg" 
-									 id = "filme-clicado" class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="harrypotter">
+							<div class=" img-thumbnail col-12 col-sm-3  shadow p-1  bg-white mb-5 mr-1 div-filme">
+								<img src="https://m.media-amazon.com/images/M/MV5BMTcxODgwMDkxNV5BMl5BanBnXkFtZTYwMDk2MDg3._V1_SX300.jpg" 
+								id = "filme-clicado" class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="harrypotter">
 								
-								</div>
-								<div class=" img-thumbnail  col-12 col-sm-3 shadow p-1  bg-white mb-5 mr-1 div-filme">	
-									<img src="https://m.media-amazon.com/images/M/MV5BZDQ2NTdmNDgtMGIwMS00ODE2LTk5M2EtZGZhYzc4MWRlNTU3XkEyXkFqcGdeQXVyNTc4MjczMTM@._V1_SX300.jpg"
-										id = "filme-clicado" class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="the_new_mutants">
-									 
-									</div>	
-								<div class=" img-thumbnail rounded movie-image col-12 col-sm-3  shadow p-1  bg-white mb-5 mr-1 div-filme">		
-									<img src="https://m.media-amazon.com/images/M/MV5BMTY3OTg2OTM3OV5BMl5BanBnXkFtZTYwNzY5OTA3._V1_SX300.jpg"
-										id = "filme-clicado"class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="asbranquelas">
-										
-								</div>
-								<div class=" img-thumbnail rounded movie-image col-12 col-sm-3  shadow p-1  bg-white mb-5 mr-1 div-filme">
-									<img src="https://m.media-amazon.com/images/M/MV5BOTgxMDQwMDk0OF5BMl5BanBnXkFtZTgwNjU5OTg2NDE@._V1_SX300.jpg"
-										id = "filme-clicado" class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="divertidamente"">
+							</div>
+							<div class=" img-thumbnail  col-12 col-sm-3 shadow p-1  bg-white mb-5 mr-1 div-filme">	
+								<img src="https://m.media-amazon.com/images/M/MV5BZDQ2NTdmNDgtMGIwMS00ODE2LTk5M2EtZGZhYzc4MWRlNTU3XkEyXkFqcGdeQXVyNTc4MjczMTM@._V1_SX300.jpg"
+								id = "filme-clicado" class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="the_new_mutants">
 								
-								</div>	
-								<div class=" img-thumbnail rounded movie-image col-12 col-sm-3  shadow p-1  bg-white mb-5 mr-1 div-filme">		
-									<img src="https://m.media-amazon.com/images/M/MV5BODcxMzY3ODY1NF5BMl5BanBnXkFtZTgwNzg1NDY4MTE@._V1_SX300.jpg"
-										id = "filme-clicado" class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="lucy">
-								 
-								</div>		
-								<div class=" img-thumbnail rounded movie-image col-12 col-sm-3 shadow p-1  bg-white mb-5 mr-1 div-filme">
-									<img src="https://m.media-amazon.com/images/M/MV5BMTQ1MjQwMTE5OF5BMl5BanBnXkFtZTgwNjk3MTcyMDE@._V1_SX300.jpg"
-										id = "filme-clicado" class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme"  alt="frozen">
-							 
-								</div>		
+							</div>	
+							<div class=" img-thumbnail rounded movie-image col-12 col-sm-3  shadow p-1  bg-white mb-5 mr-1 div-filme">		
+								<img src="https://m.media-amazon.com/images/M/MV5BMTY3OTg2OTM3OV5BMl5BanBnXkFtZTYwNzY5OTA3._V1_SX300.jpg"
+								id = "filme-clicado"class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="asbranquelas">
+								
+							</div>
+							<div class=" img-thumbnail rounded movie-image col-12 col-sm-3  shadow p-1  bg-white mb-5 mr-1 div-filme">
+								<img src="https://m.media-amazon.com/images/M/MV5BOTgxMDQwMDk0OF5BMl5BanBnXkFtZTgwNjU5OTg2NDE@._V1_SX300.jpg"
+								id = "filme-clicado" class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="divertidamente"">
+								
+							</div>	
+							<div class=" img-thumbnail rounded movie-image col-12 col-sm-3  shadow p-1  bg-white mb-5 mr-1 div-filme">		
+								<img src="https://m.media-amazon.com/images/M/MV5BODcxMzY3ODY1NF5BMl5BanBnXkFtZTgwNzg1NDY4MTE@._V1_SX300.jpg"
+								id = "filme-clicado" class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="lucy">
+								
+							</div>		
+							<div class=" img-thumbnail rounded movie-image col-12 col-sm-3 shadow p-1  bg-white mb-5 mr-1 div-filme">
+								<img src="https://m.media-amazon.com/images/M/MV5BMTQ1MjQwMTE5OF5BMl5BanBnXkFtZTgwNjk3MTcyMDE@._V1_SX300.jpg"
+								id = "filme-clicado" class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme"  alt="frozen">
+								
+							</div>		
 						</picture>
 					</div>
 				</div>	
-					
+				
 				<!-- Séries -->
 				<div id="filmes">
 					<div>
-						<h2 id= "click-serie">Series</h2>
+						<h2 class="textoGenero" id= "click-serie">Series</h2>
 					</div>
 					<div class="container">
 						<picture class="row container-movie-poster d-flex justify-content-around mb-5 fundo-especial" >
-								<div class=" col-12 col-sm-3  shadow p-2 bg-white mb-5 mr-1 div-filme">
-									<img src="https://m.media-amazon.com/images/M/MV5BMTU0MTI0MDAyM15BMl5BanBnXkFtZTgwMDg5MzYyNTM@._V1_SX300.jpg" 
-										id = "filme-clicado"class = "mb-2 p-1 imagem-Filme"  data-toggle="modal" data-target="#exibir-filme" alt="thehands">
-								</div>
-								<div class=" col-12 col-sm-3 shadow p-2  bg-white mb-5 mr-1 div-filme">	
-									<img src="https://m.media-amazon.com/images/M/MV5BNjg1MDQ5MjQ2N15BMl5BanBnXkFtZTYwNjI5NjA3._V1_SX300.jpg"
-										id = "filme-clicado"class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme"  alt="howmother">
-									</div>	
-								<div class=" col-12 col-sm-3  shadow p-2  bg-white mb-5 mr-1 div-filme">		
-									<img src="https://m.media-amazon.com/images/M/MV5BM2I1OWZiNTUtZGNmOS00NGNiLTlhZmItOTU3MGRlMWFkYWU3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
-									id = "filme-clicado" class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="doompatrol">
-								</div>
-								<div class=" col-12 col-sm-3  shadow p-2  bg-white mb-5 mr-1 div-filme">
-									<img src="https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_SX300.jpg"
-										id = "filme-clicado"class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="gameoftrones">
-				
-								</div>	
-								<div class=" col-12 col-sm-3  shadow p-1  bg-white mb-5 mr-1 div-filme">		
-									<img src="https://m.media-amazon.com/images/M/MV5BYTM3YWVhMDMtNjczMy00NGEyLWJhZDctYjNhMTRkNDE0ZTI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
-										id = "filme-clicado"class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="blackmirror">
+							<div class=" col-12 col-sm-3  shadow p-2 bg-white mb-5 mr-1 div-filme">
+								<img src="https://m.media-amazon.com/images/M/MV5BMTU0MTI0MDAyM15BMl5BanBnXkFtZTgwMDg5MzYyNTM@._V1_SX300.jpg" 
+								id = "filme-clicado"class = "mb-2 p-1 imagem-Filme"  data-toggle="modal" data-target="#exibir-filme" alt="thehands">
+							</div>
+							<div class=" col-12 col-sm-3 shadow p-2  bg-white mb-5 mr-1 div-filme">	
+								<img src="https://m.media-amazon.com/images/M/MV5BNjg1MDQ5MjQ2N15BMl5BanBnXkFtZTYwNjI5NjA3._V1_SX300.jpg"
+								id = "filme-clicado"class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme"  alt="howmother">
+							</div>	
+							<div class=" col-12 col-sm-3  shadow p-2  bg-white mb-5 mr-1 div-filme">		
+								<img src="https://m.media-amazon.com/images/M/MV5BM2I1OWZiNTUtZGNmOS00NGNiLTlhZmItOTU3MGRlMWFkYWU3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
+								id = "filme-clicado" class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="doompatrol">
+							</div>
+							<div class=" col-12 col-sm-3  shadow p-2  bg-white mb-5 mr-1 div-filme">
+								<img src="https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_SX300.jpg"
+								id = "filme-clicado"class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="gameoftrones">
 								
-								</div>		
-								<div class=" col-12 col-sm-3 shadow p-1  bg-white mb-5 mr-1 div-filme">
-									<img src="https://m.media-amazon.com/images/M/MV5BMjhiMzgxZTctNDc1Ni00OTIxLTlhMTYtZTA3ZWFkODRkNmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
-										id = "filme-clicado"class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="breakingbad">
+							</div>	
+							<div class=" col-12 col-sm-3  shadow p-1  bg-white mb-5 mr-1 div-filme">		
+								<img src="https://m.media-amazon.com/images/M/MV5BYTM3YWVhMDMtNjczMy00NGEyLWJhZDctYjNhMTRkNDE0ZTI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
+								id = "filme-clicado"class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="blackmirror">
 								
-								</div>		
+							</div>		
+							<div class=" col-12 col-sm-3 shadow p-1  bg-white mb-5 mr-1 div-filme">
+								<img src="https://m.media-amazon.com/images/M/MV5BMjhiMzgxZTctNDc1Ni00OTIxLTlhMTYtZTA3ZWFkODRkNmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+								id = "filme-clicado"class = "mb-2 p-1 imagem-Filme" data-toggle="modal" data-target="#exibir-filme" alt="breakingbad">
+								
+							</div>		
 						</picture>
 					</div>	
 				</div>
