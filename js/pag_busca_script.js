@@ -28,7 +28,7 @@ class Model {
       
     });
 
-    request.open("GET",`http://www.omdbapi.com/?apikey=167350f2&s=${junta}&page=1`);
+    request.open("GET",`https://www.omdbapi.com/?apikey=167350f2&s=${junta}&page=1`);
     request.send();
   }
 

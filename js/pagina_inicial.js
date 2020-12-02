@@ -39,7 +39,7 @@ class Model {
         erro(request.status)
       }
     });
-    request.open("GET",`http://www.omdbapi.com/?apikey=167350f2&i=${idFilme}&plot=full`);
+    request.open("GET",`https://www.omdbapi.com/?apikey=167350f2&i=${idFilme}&plot=full`);
     request.send();
   }
   _processaDados(filmeDados) {
