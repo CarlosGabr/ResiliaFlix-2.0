@@ -18,17 +18,15 @@ class CepModel {
     console.log(cepQueQueroBuscar);
     let request = new XMLHttpRequest();
     request.addEventListener ("load" , () =>{
-      try {
         if (request.status == 200) {
           this._atualizaDados(this._processaDados(request.responseText));
           funcaoExecutadaAposResposta();
         }
-      }catch {
-        console.log("t aq")
-        setTimeout(()  => {
-          window.location.href = `https://viacep.com.br/ws/${cepQueQueroBuscar}/json/`
-        },1000);
-      }   
+
+        else{
+          alert ("CARALHOOOOOOOOO")
+        }
+        
     });
     request.open("GET",`https://viacep.com.br/ws/${cepQueQueroBuscar}/json/`);
     request.send();
@@ -58,14 +56,14 @@ class CepView {
     let tituloModal = document.querySelector(".modal-title");
     cadastroModal.id = "textoModal";
     tituloModal.innerHTML = `<img id="logoExibicao" src="../img/logoResilia2.png">`;
-    cadastroModal.innerHTML = "Cadastro Realizado com Sucesso!"
+    cadastroModal.innerHTML = "Your registration has been successfully completed"
   }
   static errorCadastro(){
     let cadastroModal = document.querySelector(".modal-body");
     let tituloModal = document.querySelector(".modal-title");
     cadastroModal.id = "textoModal";
     tituloModal.innerHTML = `<img id="logoExibicao" src="../img/logoResilia2.png">`;
-    cadastroModal.innerHTML = "Preencha todos os campos e tente novamente"
+    cadastroModal.innerHTML = "Something went wrong. Please fill in all fields correctly and try again."
   }
   static limpaCampos(){
     document.getElementById('input-name').value= "";
@@ -95,10 +93,25 @@ botaoDeEnviar.addEventListener("click", () => {
       console.log(contador)
     }
 });
-  if (contador == 0) {
+
+let inputCEP = document.getElementById("input-cep")
+let input1 = inputCEP.value;
+console.log(input1.length)
+let inputCity = document.getElementById("input-cidade")
+let inputCityValue = inputCity.value;
+  if (contador == 0 && input1.length == 8) {
     CepView.cadastroEfetuado();  
     CepView.limpaCampos();
-  }else {
+    contador = 0;
+  }
+
+  else if (inputCityValue == undefined){
+    CepView.errorCadastro();
+    CepView.limpaCampos();
+    contador = 0;
+  }
+  
+  else {
     CepView.errorCadastro();
     CepView.limpaCampos();
     contador = 0;
