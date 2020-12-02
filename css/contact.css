@@ -1,0 +1,70 @@
+/* Fontes do projeto*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+#paiCorpoContato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0 100px 0;
+}
+#corpoContact{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.time{
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+}
+#divmae {
+    color: #fff100;
+}
+.nav-bar-header{
+    background-color: black!important;
+    height: auto;
+} 
+.cor-botao {
+    background-color: #fff100!important;
+    border: 2px solid #fff100!important;
+}
+.cor-do-link {
+    color: #fff100!important;
+    font-size: 30px;
+	margin-left: 5px;
+}
+.nav-bar-alinhar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*ALUNOS*/
+.aluno{
+    width: 200px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.fotoAluno{
+    width: 150px;
+    margin: 30px 15px 5px 15px;
+
+}
+.icones{
+    width: 30px;
+    margin: 10px ;
+    align-items: center;
+}
