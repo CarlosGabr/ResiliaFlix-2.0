@@ -45,11 +45,16 @@ class Model {
 }
     else if (dadosProcessados.Response == "False"){
       let divNotFound = document.createElement("div");
-      document.body.appendChild(divNotFound);
-      divNotFound.innerHTML= ` 
+      let section = document.getElementById("grid-de-filmes")
+      section.appendChild(divNotFound);
+      divNotFound.innerHTML= `<div id = "notFound">
                           <h3> Unfortunately, the title you're looking for is not avaliable. </h3>
-                              <img src="https://media1.tenor.com/images/aa5ad7ceb09b65f48169895d78ff2f9b/tenor.gif?itemid=5652747" alt = "sad_jon">
-                              <h3>Please, try another title.</h3>` 
+                              <img src="https://media1.tenor.com/images/aa5ad7ceb09b65f48169895d78ff2f9b/tenor.gif?itemid=5652747" alt = "sad_jon" id = "img_jon">
+                              <h3>Please, try another title.</h3></div> ` 
+      let teste = document.getElementById("fname");
+      teste.addEventListener("click", ()=>{
+        window.location.reload();
+      })
 } 
   }
   
