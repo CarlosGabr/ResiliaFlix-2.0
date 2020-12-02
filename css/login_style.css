@@ -30,3 +30,11 @@
     text-transform: uppercase;
     font-weight: bold;
 }
+
+#forgotten_password a{
+    color: black;
+}
+
+#forgotten_password a:hover{
+    color:  #fff100;
+}
