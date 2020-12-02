@@ -1,3 +1,4 @@
+// Esqueci a senha!
 let forgot = document.getElementById("forgotten_password");
 
 forgot.addEventListener("click", ()=>{
@@ -16,15 +17,35 @@ forgot.addEventListener("click", ()=>{
 });
 
 function abrirModal (){
-    let tituloModal = document.querySelector(".modal-title");
-    tituloModal.innerHTML = `<img id="logoExibicao" src="../img/logoResilia2.png">
-                              `;
-    let corpoModal = document.querySelector(".modal-body");
-    corpoModal.innerText = `Email successfully sent!`;
+  let tituloModal = document.querySelector(".modal-title");
+  tituloModal.innerHTML = `<img id="logoExibicao" src="../img/logoResilia2.png">
+                            `;
+  let corpoModal = document.querySelector(".modal-body");
+  corpoModal.innerText = `Email successfully sent!`;
+};
+// Término
+
+
+function newModal (){
+  let tituloModal = document.querySelector(".modal-title");
+  tituloModal.innerHTML = `<img id="logoExibicao" src="../img/logoResilia2.png">
+                            `;
+  let corpoModal = document.querySelector(".modal-body");
+  corpoModal.innerText = `Successfully connected!`;
 };
 
-var senha = $('#senha');
-var olho= $("#olho");
+function erroModal(){
+  console.log("Não enviei")
+  let tituloModal = document.querySelector(".modal-title");
+  tituloModal.innerHTML = `<img id="logoExibicao" src="../img/logoResilia2.png">
+                            `;
+  let corpoModal = document.querySelector(".modal-body");
+  corpoModal.innerText = `Unsigned email and password`;
+};
+
+
+let senha = $('#senha');
+let olho= $("#olho");
 
 olho.mousedown(function() {
   senha.attr("type", "text");
@@ -33,8 +54,25 @@ olho.mousedown(function() {
 olho.mouseup(function() {
   senha.attr("type", "password");
 });
+
 // para evitar o problema de arrastar a imagem e a senha continuar exposta, 
-//citada pelo nosso amigo nos comentários
 $( "#olho" ).mouseout(function() { 
   $("#senha").attr("type", "password");
 });
+
+let botaoEntrar = document.getElementById("btnn");
+
+let email = document.getElementById("email");
+let senha1 = document.getElementById("senha");
+
+let email1 = email.value;
+let senha2 = senha1.value;
+console.log(email1)
+console.log(senha2)
+
+if(email1.length == 0 || senha2.length == 0){
+  console.log("Não enviado")
+ erroModal();
+}else {
+  newModal();
+}
