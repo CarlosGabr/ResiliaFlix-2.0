@@ -24,7 +24,7 @@ class CepModel {
         }
 
         else{
-          alert ("CARALHOOOOOOOOO")
+          alert ("Error. Please try again.")
         }
         
     });
